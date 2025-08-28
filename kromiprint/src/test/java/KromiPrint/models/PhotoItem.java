@@ -1,5 +1,5 @@
 package KromiPrint.models;
-import java.util.UUID;
+
     
 public class PhotoItem {
 private final PhotoSize size;
@@ -15,8 +15,8 @@ this.code = generateCode(size, priority);
 
 
 private static String generateCode(PhotoSize size, Priority priority) {
-String uid = UUID.randomUUID().toString().substring(0, 8).toUpperCase();
-return size.getLabel().replace("x", "X") + "-" + priority.getCode() + "-" + uid;
+
+return "" ;
 }
 
 
