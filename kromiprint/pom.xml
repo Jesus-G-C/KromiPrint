@@ -13,4 +13,21 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <!-- 🔽 Aquí van todas tus dependencias -->
+    <dependencies>
+        <!-- Driver de MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <!-- (Opcional) Dependencia para manejar variables .env -->
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>java-dotenv</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+    </dependencies>
+
 </project>

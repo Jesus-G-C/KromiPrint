@@ -1,11 +1,21 @@
 package KromiPrint.ui;
 
-import KromiPrint.models.*;
-import KromiPrint.process.*;
 import java.util.List;
 import java.util.Scanner;
 
+import KromiPrint.models.Customer;
+import KromiPrint.models.PhotoOrder;
+import KromiPrint.models.PhotoSize;
+import KromiPrint.models.Priority;
+import KromiPrint.process.AdminService;
+import KromiPrint.process.CashierService;
+import KromiPrint.process.EmployeeService;
+import KromiPrint.process.OrderRepository;
+import KromiPrint.process.OrderService;
+import KromiPrint.process.QueueManager;
+
 public class CLI {
+
     private final OrderRepository repo = new OrderRepository();
     private final OrderService orderService = new OrderService(repo);
     private final EmployeeService employeeService = new EmployeeService(repo);
@@ -14,12 +24,16 @@ public class CLI {
     private final QueueManager queueManager = new QueueManager(repo);
 
     private final Scanner sc = new Scanner(System.in);
+    
+   
+
 
     public static void main(String[] args) {
         new CLI().runApp();
     }
 
     private void runApp() {
+
         System.out.println("Welcome to KromiPrint");
         boolean exit = false;
         while (!exit) {
